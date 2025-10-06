@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mini Lecteur de Films</title>
+    <!-- Google Font Poppins pour un rendu propre -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1 class="title">🎬 Mini Lecteur de Films</h1>
+
+    <div class="movie-grid">
+      <div class="movie-card" data-video="videos/film1.mp4">
+        <img
+          src="https://image.tmdb.org/t/p/w500/2CAL2433ZeIihfX1Hb2139CX0pW.jpg"
+          alt="Film 1"
+        />
+        <h3>Inception</h3>
+        <button class="play-btn">▶️ Lire</button>
+      </div>
+
+      <div class="movie-card" data-video="videos/film2.mp4">
+        <img
+          src="https://image.tmdb.org/t/p/w500/q719jXXEzOoYaps6babgKnONONX.jpg"
+          alt="Film 2"
+        />
+        <h3>Interstellar</h3>
+        <button class="play-btn">▶️ Lire</button>
+      </div>
+
+      <div class="movie-card" data-video="videos/film3.mp4">
+        <img
+          src="https://image.tmdb.org/t/p/w500/1E5baAaEse26fej7uHcjOgEE2t2.jpg
+
+          alt="Film 3"
+        />
+        <h3>Fast X</h3>
+        <button class="play-btn">▶️ Lire</button>
+      </div>
+    </div>
+
+    <!-- Fenêtre de lecture -->
+    <div class="player-overlay hidden" id="playerOverlay">
+      <div class="player">
+        <video id="videoPlayer" width="100%" controls></video>
+        <div
+          id="playerMessage"
+          class="player-message hidden"
+          role="status"
+          aria-live="polite"
+        ></div>
+
+        <div class="controls">
+          <button id="playPauseBtn">▶</button>
+          <input type="range" id="progressBar" value="0" min="0" max="100" />
+          <button id="closeBtn">❌</button>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
